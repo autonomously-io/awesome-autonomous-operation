@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#040b14"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan-flow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b8d4"/>
+      <stop offset="50%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#18ffff"/>
+    </linearGradient>
+    <linearGradient id="blue-flow" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="50%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#42a5f5"/>
+    </linearGradient>
+    <filter id="node-glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="core-glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="line-glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="url(#bg)"/>
+
+  <!-- Ambient glow -->
+  <circle cx="256" cy="256" r="200" fill="url(#glow)"/>
+
+  <!-- Outer ring — closed loop -->
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#0d2137" stroke-width="1.5"/>
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#0d2137" stroke-width="1"/>
+
+  <!-- Network mesh connections (outer to mid) -->
+  <g stroke="url(#blue-flow)" stroke-width="1.2" opacity="0.5" filter="url(#line-glow)">
+    <!-- Top cluster -->
+    <line x1="256" y1="86" x2="190" y2="140"/>
+    <line x1="256" y1="86" x2="322" y2="140"/>
+    <line x1="190" y1="140" x2="322" y2="140"/>
+    <!-- Right cluster -->
+    <line x1="426" y1="256" x2="372" y2="190"/>
+    <line x1="426" y1="256" x2="372" y2="322"/>
+    <line x1="372" y1="190" x2="372" y2="322"/>
+    <!-- Bottom cluster -->
+    <line x1="256" y1="426" x2="190" y2="372"/>
+    <line x1="256" y1="426" x2="322" y2="372"/>
+    <line x1="190" y1="372" x2="322" y2="372"/>
+    <!-- Left cluster -->
+    <line x1="86" y1="256" x2="140" y2="190"/>
+    <line x1="86" y1="256" x2="140" y2="322"/>
+    <line x1="140" y1="190" x2="140" y2="322"/>
+  </g>
+
+  <!-- Cross connections (mid nodes to center area) -->
+  <g stroke="url(#cyan-flow)" stroke-width="1" opacity="0.4" filter="url(#line-glow)">
+    <line x1="190" y1="140" x2="256" y2="200"/>
+    <line x1="322" y1="140" x2="256" y2="200"/>
+    <line x1="372" y1="190" x2="312" y2="256"/>
+    <line x1="372" y1="322" x2="312" y2="256"/>
+    <line x1="322" y1="372" x2="256" y2="312"/>
+    <line x1="190" y1="372" x2="256" y2="312"/>
+    <line x1="140" y1="322" x2="200" y2="256"/>
+    <line x1="140" y1="190" x2="200" y2="256"/>
+  </g>
+
+  <!-- Inner connections forming the "A" / autonomous loop -->
+  <g stroke="url(#cyan-flow)" stroke-width="1.5" opacity="0.7" filter="url(#line-glow)">
+    <line x1="256" y1="200" x2="312" y2="256"/>
+    <line x1="312" y1="256" x2="256" y2="312"/>
+    <line x1="256" y1="312" x2="200" y2="256"/>
+    <line x1="200" y1="256" x2="256" y2="200"/>
+  </g>
+
+  <!-- Closed-loop arrows (circular flow) on outer ring -->
+  <g fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.6" filter="url(#line-glow)">
+    <path d="M 256 86 A 170 170 0 0 1 426 256" stroke-dasharray="4,8"/>
+    <path d="M 426 256 A 170 170 0 0 1 256 426" stroke-dasharray="4,8"/>
+    <path d="M 256 426 A 170 170 0 0 1 86 256" stroke-dasharray="4,8"/>
+    <path d="M 86 256 A 170 170 0 0 1 256 86" stroke-dasharray="4,8"/>
+  </g>
+
+  <!-- Outer nodes (cardinal points) -->
+  <g filter="url(#node-glow)">
+    <circle cx="256" cy="86" r="8" fill="#00e5ff"/>
+    <circle cx="426" cy="256" r="8" fill="#00e5ff"/>
+    <circle cx="256" cy="426" r="8" fill="#00e5ff"/>
+    <circle cx="86" cy="256" r="8" fill="#00e5ff"/>
+  </g>
+
+  <!-- Mid nodes -->
+  <g filter="url(#node-glow)">
+    <circle cx="190" cy="140" r="5" fill="#42a5f5"/>
+    <circle cx="322" cy="140" r="5" fill="#42a5f5"/>
+    <circle cx="372" cy="190" r="5" fill="#42a5f5"/>
+    <circle cx="372" cy="322" r="5" fill="#42a5f5"/>
+    <circle cx="322" cy="372" r="5" fill="#42a5f5"/>
+    <circle cx="190" cy="372" r="5" fill="#42a5f5"/>
+    <circle cx="140" cy="322" r="5" fill="#42a5f5"/>
+    <circle cx="140" cy="190" r="5" fill="#42a5f5"/>
+  </g>
+
+  <!-- Inner diamond nodes -->
+  <g filter="url(#node-glow)">
+    <circle cx="256" cy="200" r="6" fill="#00e5ff"/>
+    <circle cx="312" cy="256" r="6" fill="#00e5ff"/>
+    <circle cx="256" cy="312" r="6" fill="#00e5ff"/>
+    <circle cx="200" cy="256" r="6" fill="#00e5ff"/>
+  </g>
+
+  <!-- Central core — the "eye" of observability -->
+  <g filter="url(#core-glow)">
+    <circle cx="256" cy="256" r="24" fill="none" stroke="#00e5ff" stroke-width="2.5" opacity="0.8"/>
+    <circle cx="256" cy="256" r="14" fill="#00e5ff" opacity="0.9"/>
+    <circle cx="256" cy="256" r="6" fill="#ffffff" opacity="0.95"/>
+  </g>
+
+  <!-- Subtle scan lines for tech feel -->
+  <g opacity="0.03">
+    <line x1="0" y1="128" x2="512" y2="128" stroke="#00e5ff" stroke-width="1"/>
+    <line x1="0" y1="256" x2="512" y2="256" stroke="#00e5ff" stroke-width="1"/>
+    <line x1="0" y1="384" x2="512" y2="384" stroke="#00e5ff" stroke-width="1"/>
+  </g>
+</svg>

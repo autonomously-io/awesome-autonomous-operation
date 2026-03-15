@@ -1,22 +1,50 @@
-# Awesome Autonomous Operation
+<p align="center">
+  <img src="assets/logo-banner.svg" alt="Awesome Autonomous Operation" width="100%">
+</p>
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+</p>
 
 A curated list of awesome resources for AI-driven autonomous operations — a concept encompassing observability, telecom automation, AIOps, and beyond.
 
 ## Contents
 
-- [Similar Projects & Awesome Lists](#similar-projects--awesome-lists)
-- [Autonomous Operation Platforms](#autonomous-operation-platforms)
-- [Observability](#observability)
-- [Data Pipeline](#data-pipeline)
-- [AIOps](#aiops)
-- [Telecom Automation](#telecom-automation)
-- [Self-Healing & Auto-Remediation](#self-healing--auto-remediation)
-- [LLM/AI for Operations](#llmai-for-operations)
-- [Incident Management & SRE](#incident-management--sre)
-- [Network Monitoring & Flow Analysis](#network-monitoring--flow-analysis)
-- [Related Papers & Standards](#related-papers--standards)
+- [Awesome Autonomous Operation](#awesome-autonomous-operation)
+  - [Contents](#contents)
+  - [Similar Projects \& Awesome Lists](#similar-projects--awesome-lists)
+  - [Autonomous Operation Platforms](#autonomous-operation-platforms)
+    - [Open Source](#open-source)
+    - [Commercial / Industry Solutions](#commercial--industry-solutions)
+  - [Observability](#observability)
+  - [Data Pipeline](#data-pipeline)
+  - [AIOps](#aiops)
+    - [Open Source](#open-source-1)
+    - [Commercial](#commercial)
+  - [Telecom Automation](#telecom-automation)
+    - [Open Source 5G Core](#open-source-5g-core)
+    - [Open Source RAN](#open-source-ran)
+    - [Platforms \& Infrastructure](#platforms--infrastructure)
+  - [Self-Healing \& Auto-Remediation](#self-healing--auto-remediation)
+  - [LLM/AI for Operations](#llmai-for-operations)
+    - [Frameworks \& Models](#frameworks--models)
+    - [Surveys](#surveys)
+  - [Incident Management \& SRE](#incident-management--sre)
+    - [Incident Management](#incident-management)
+    - [SRE Practices](#sre-practices)
+    - [Infrastructure as Code](#infrastructure-as-code)
+  - [Network Monitoring \& Flow Analysis](#network-monitoring--flow-analysis)
+    - [Awesome Lists](#awesome-lists)
+    - [Infrastructure Monitoring](#infrastructure-monitoring)
+    - [Flow Collection \& Analysis (sFlow / NetFlow / IPFIX)](#flow-collection--analysis-sflow--netflow--ipfix)
+    - [Active Measurement \& Probing](#active-measurement--probing)
+    - [TWAMP / STAMP](#twamp--stamp)
+    - [Packet Capture \& Deep Analysis](#packet-capture--deep-analysis)
+  - [Related Papers \& Standards](#related-papers--standards)
+    - [Standards \& Frameworks](#standards--frameworks)
+    - [Academic Papers](#academic-papers)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ---
 
