@@ -1,12 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Background -->
-  <rect width="512" height="512" rx="64" fill="#0d1420"/>
-
-  <g transform="translate(256, 256) scale(3.5)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <g transform="translate(60, 60)">
     <!-- Circular outline -->
     <circle cx="0" cy="0" r="50" stroke="#4a9eff" stroke-width="1.8" opacity="0.3" fill="none"/>
 
-    <!-- Edges: Outer to Middle -->
+    <!-- Edges: Outer → Middle (straight lines, node center to node center) -->
     <line x1="0" y1="-42" x2="0" y2="-24" stroke="#4a9eff" stroke-width="1.2" opacity="0.4"/>
     <line x1="-36" y1="-21" x2="0" y2="-24" stroke="#4a9eff" stroke-width="1.2" opacity="0.35"/>
     <line x1="36" y1="-21" x2="0" y2="-24" stroke="#4a9eff" stroke-width="1.2" opacity="0.35"/>
@@ -19,7 +16,7 @@
     <line x1="0" y1="-42" x2="-21" y2="12" stroke="#4a9eff" stroke-width="1" opacity="0.15"/>
     <line x1="0" y1="-42" x2="21" y2="12" stroke="#4a9eff" stroke-width="1" opacity="0.15"/>
 
-    <!-- Edges: Middle to Core -->
+    <!-- Edges: Middle → Core -->
     <line x1="0" y1="-24" x2="0" y2="0" stroke="#4a9eff" stroke-width="1.8" opacity="0.5"/>
     <line x1="-21" y1="12" x2="0" y2="0" stroke="#4a9eff" stroke-width="1.8" opacity="0.5"/>
     <line x1="21" y1="12" x2="0" y2="0" stroke="#4a9eff" stroke-width="1.8" opacity="0.5"/>
@@ -45,4 +42,9 @@
     <circle cx="0" cy="0" r="14" fill="#4a9eff" opacity="0.15"/>
     <circle cx="0" cy="0" r="22" fill="#4a9eff" opacity="0.06"/>
   </g>
+
+  <!-- Text: a10y -->
+  <text x="140" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="500" letter-spacing="0.04em" fill="#ffffff">
+    <tspan>a</tspan><tspan fill="#4a9eff">10</tspan><tspan>y</tspan>
+  </text>
 </svg>

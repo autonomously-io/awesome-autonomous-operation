@@ -1,179 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" width="1000" height="200">
   <defs>
-    <linearGradient id="bb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060e1a"/>
-      <stop offset="100%" stop-color="#0a1628"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="100%" stop-color="#0d1420"/>
     </linearGradient>
-    <radialGradient id="bb-glow" cx="12%" cy="50%" r="25%">
-      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="bb-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00b8d4"/>
-      <stop offset="50%" stop-color="#00e5ff"/>
-      <stop offset="100%" stop-color="#18ffff"/>
-    </linearGradient>
-    <linearGradient id="bb-blue" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1565c0"/>
-      <stop offset="50%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#42a5f5"/>
-    </linearGradient>
-    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#e0e0e0"/>
-      <stop offset="100%" stop-color="#fafafa"/>
-    </linearGradient>
-    <linearGradient id="sub-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00b8d4"/>
-      <stop offset="100%" stop-color="#18ffff"/>
-    </linearGradient>
-    <filter id="bn-glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="bc-glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="bl-glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="text-shadow">
-      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#00e5ff" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="300" rx="16" fill="url(#bb-bg)"/>
-  <rect width="1200" height="300" rx="16" fill="url(#bb-glow)"/>
+  <rect width="1000" height="200" rx="12" fill="url(#bg)"/>
 
-  <!-- Decorative grid lines -->
-  <g opacity="0.04" stroke="#00e5ff" stroke-width="1">
-    <line x1="0" y1="75" x2="1200" y2="75"/>
-    <line x1="0" y1="150" x2="1200" y2="150"/>
-    <line x1="0" y1="225" x2="1200" y2="225"/>
-  </g>
+  <!-- Logo mark -->
+  <g transform="translate(80, 100) scale(1.3)">
+    <!-- Circular outline -->
+    <circle cx="0" cy="0" r="50" stroke="#4a9eff" stroke-width="1.8" opacity="0.3" fill="none"/>
 
-  <!-- Mini logo (scaled version of icon) centered at x=130, y=150 -->
-  <g transform="translate(130, 150) scale(0.42)">
-    <!-- Outer ring -->
-    <circle cx="0" cy="0" r="170" fill="none" stroke="#0d2137" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="130" fill="none" stroke="#0d2137" stroke-width="1"/>
+    <!-- Edges: Outer to Middle -->
+    <line x1="0" y1="-42" x2="0" y2="-24" stroke="#4a9eff" stroke-width="1.2" opacity="0.4"/>
+    <line x1="-36" y1="-21" x2="0" y2="-24" stroke="#4a9eff" stroke-width="1.2" opacity="0.35"/>
+    <line x1="36" y1="-21" x2="0" y2="-24" stroke="#4a9eff" stroke-width="1.2" opacity="0.35"/>
+    <line x1="-36" y1="21" x2="-21" y2="12" stroke="#4a9eff" stroke-width="1.2" opacity="0.4"/>
+    <line x1="36" y1="21" x2="21" y2="12" stroke="#4a9eff" stroke-width="1.2" opacity="0.4"/>
+    <line x1="0" y1="42" x2="-21" y2="12" stroke="#4a9eff" stroke-width="1.2" opacity="0.35"/>
+    <line x1="0" y1="42" x2="21" y2="12" stroke="#4a9eff" stroke-width="1.2" opacity="0.35"/>
+    <line x1="-36" y1="-21" x2="-21" y2="12" stroke="#4a9eff" stroke-width="1" opacity="0.2"/>
+    <line x1="36" y1="-21" x2="21" y2="12" stroke="#4a9eff" stroke-width="1" opacity="0.2"/>
+    <line x1="0" y1="-42" x2="-21" y2="12" stroke="#4a9eff" stroke-width="1" opacity="0.15"/>
+    <line x1="0" y1="-42" x2="21" y2="12" stroke="#4a9eff" stroke-width="1" opacity="0.15"/>
 
-    <!-- Closed-loop dashed arcs -->
-    <g fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.5" filter="url(#bl-glow)">
-      <path d="M 0 -170 A 170 170 0 0 1 170 0" stroke-dasharray="4,8"/>
-      <path d="M 170 0 A 170 170 0 0 1 0 170" stroke-dasharray="4,8"/>
-      <path d="M 0 170 A 170 170 0 0 1 -170 0" stroke-dasharray="4,8"/>
-      <path d="M -170 0 A 170 170 0 0 1 0 -170" stroke-dasharray="4,8"/>
-    </g>
+    <!-- Edges: Middle to Core -->
+    <line x1="0" y1="-24" x2="0" y2="0" stroke="#4a9eff" stroke-width="1.8" opacity="0.5"/>
+    <line x1="-21" y1="12" x2="0" y2="0" stroke="#4a9eff" stroke-width="1.8" opacity="0.5"/>
+    <line x1="21" y1="12" x2="0" y2="0" stroke="#4a9eff" stroke-width="1.8" opacity="0.5"/>
 
-    <!-- Network connections -->
-    <g stroke="url(#bb-blue)" stroke-width="1.2" opacity="0.5" filter="url(#bl-glow)">
-      <line x1="0" y1="-170" x2="-66" y2="-116"/>
-      <line x1="0" y1="-170" x2="66" y2="-116"/>
-      <line x1="-66" y1="-116" x2="66" y2="-116"/>
-      <line x1="170" y1="0" x2="116" y2="-66"/>
-      <line x1="170" y1="0" x2="116" y2="66"/>
-      <line x1="116" y1="-66" x2="116" y2="66"/>
-      <line x1="0" y1="170" x2="-66" y2="116"/>
-      <line x1="0" y1="170" x2="66" y2="116"/>
-      <line x1="-66" y1="116" x2="66" y2="116"/>
-      <line x1="-170" y1="0" x2="-116" y2="-66"/>
-      <line x1="-170" y1="0" x2="-116" y2="66"/>
-      <line x1="-116" y1="-66" x2="-116" y2="66"/>
-    </g>
+    <!-- Outer ring nodes -->
+    <circle cx="0" cy="-42" r="3.5" fill="#4a9eff" opacity="0.7"/>
+    <circle cx="-36" cy="-21" r="3.5" fill="#4a9eff" opacity="0.7"/>
+    <circle cx="-36" cy="21" r="3.5" fill="#4a9eff" opacity="0.7"/>
+    <circle cx="0" cy="42" r="3.5" fill="#4a9eff" opacity="0.7"/>
+    <circle cx="36" cy="21" r="3.5" fill="#4a9eff" opacity="0.75"/>
+    <circle cx="36" cy="-21" r="3.5" fill="#4a9eff" opacity="0.75"/>
 
-    <!-- Inner connections -->
-    <g stroke="url(#bb-cyan)" stroke-width="1" opacity="0.4" filter="url(#bl-glow)">
-      <line x1="-66" y1="-116" x2="0" y2="-56"/>
-      <line x1="66" y1="-116" x2="0" y2="-56"/>
-      <line x1="116" y1="-66" x2="56" y2="0"/>
-      <line x1="116" y1="66" x2="56" y2="0"/>
-      <line x1="66" y1="116" x2="0" y2="56"/>
-      <line x1="-66" y1="116" x2="0" y2="56"/>
-      <line x1="-116" y1="66" x2="-56" y2="0"/>
-      <line x1="-116" y1="-66" x2="-56" y2="0"/>
-    </g>
-
-    <!-- Inner diamond -->
-    <g stroke="url(#bb-cyan)" stroke-width="1.5" opacity="0.7" filter="url(#bl-glow)">
-      <line x1="0" y1="-56" x2="56" y2="0"/>
-      <line x1="56" y1="0" x2="0" y2="56"/>
-      <line x1="0" y1="56" x2="-56" y2="0"/>
-      <line x1="-56" y1="0" x2="0" y2="-56"/>
-    </g>
-
-    <!-- Outer nodes -->
-    <g filter="url(#bn-glow)">
-      <circle cx="0" cy="-170" r="7" fill="#00e5ff"/>
-      <circle cx="170" cy="0" r="7" fill="#00e5ff"/>
-      <circle cx="0" cy="170" r="7" fill="#00e5ff"/>
-      <circle cx="-170" cy="0" r="7" fill="#00e5ff"/>
-    </g>
-
-    <!-- Mid nodes -->
-    <g filter="url(#bn-glow)">
-      <circle cx="-66" cy="-116" r="4" fill="#42a5f5"/>
-      <circle cx="66" cy="-116" r="4" fill="#42a5f5"/>
-      <circle cx="116" cy="-66" r="4" fill="#42a5f5"/>
-      <circle cx="116" cy="66" r="4" fill="#42a5f5"/>
-      <circle cx="66" cy="116" r="4" fill="#42a5f5"/>
-      <circle cx="-66" cy="116" r="4" fill="#42a5f5"/>
-      <circle cx="-116" cy="66" r="4" fill="#42a5f5"/>
-      <circle cx="-116" cy="-66" r="4" fill="#42a5f5"/>
-    </g>
-
-    <!-- Inner nodes -->
-    <g filter="url(#bn-glow)">
-      <circle cx="0" cy="-56" r="5" fill="#00e5ff"/>
-      <circle cx="56" cy="0" r="5" fill="#00e5ff"/>
-      <circle cx="0" cy="56" r="5" fill="#00e5ff"/>
-      <circle cx="-56" cy="0" r="5" fill="#00e5ff"/>
-    </g>
+    <!-- Middle ring nodes -->
+    <circle cx="0" cy="-24" r="4" fill="#4a9eff" opacity="0.85"/>
+    <circle cx="-21" cy="12" r="4" fill="#4a9eff" opacity="0.85"/>
+    <circle cx="21" cy="12" r="4" fill="#4a9eff" opacity="0.85"/>
 
     <!-- Core -->
-    <g filter="url(#bc-glow)">
-      <circle cx="0" cy="0" r="20" fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.8"/>
-      <circle cx="0" cy="0" r="11" fill="#00e5ff" opacity="0.9"/>
-      <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.95"/>
-    </g>
+    <circle cx="0" cy="0" r="8" fill="#4a9eff"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff" opacity="0.4"/>
+
+    <!-- Glow -->
+    <circle cx="0" cy="0" r="14" fill="#4a9eff" opacity="0.15"/>
+    <circle cx="0" cy="0" r="22" fill="#4a9eff" opacity="0.06"/>
   </g>
 
-  <!-- Text: "Awesome" -->
-  <text x="310" y="118" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="24" font-weight="300" letter-spacing="6" fill="#607d8b" text-anchor="start">AWESOME</text>
+  <!-- Text: Awesome -->
+  <text x="210" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="300" letter-spacing="0.3em" fill="#5a6a7a">AWESOME</text>
 
-  <!-- Text: "Autonomous Operation" -->
-  <text x="310" y="175" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="52" font-weight="600" letter-spacing="1" fill="url(#text-grad)" filter="url(#text-shadow)" text-anchor="start">Autonomous Operation</text>
+  <!-- Text: Autonomous Operation -->
+  <text x="210" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="500" letter-spacing="0.02em" fill="#ffffff">Autonomous Operation</text>
 
   <!-- Accent line -->
-  <line x1="310" y1="195" x2="580" y2="195" stroke="url(#sub-grad)" stroke-width="2" opacity="0.6"/>
+  <line x1="210" y1="135" x2="420" y2="135" stroke="#4a9eff" stroke-width="1.5" opacity="0.4"/>
 
   <!-- Subtitle -->
-  <text x="310" y="225" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="16" font-weight="300" letter-spacing="1.5" fill="#78909c" text-anchor="start">AI-driven autonomous operations for IT and telecom</text>
-
-  <!-- Awesome badge area -->
-  <g transform="translate(310, 242)">
-    <rect width="80" height="22" rx="3" fill="#fc60a8"/>
-    <text x="40" y="15" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">awesome</text>
-  </g>
-
-  <!-- Right side decorative particles -->
-  <g opacity="0.15">
-    <circle cx="1050" cy="80" r="2" fill="#00e5ff"/>
-    <circle cx="1100" cy="120" r="1.5" fill="#42a5f5"/>
-    <circle cx="1020" cy="200" r="1" fill="#00e5ff"/>
-    <circle cx="1130" cy="180" r="2" fill="#42a5f5"/>
-    <circle cx="1080" cy="240" r="1.5" fill="#00e5ff"/>
-    <circle cx="1150" cy="100" r="1" fill="#42a5f5"/>
-  </g>
+  <text x="210" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="300" letter-spacing="0.05em" fill="#5a7a9a">AI-driven autonomous operations for IT and telecom</text>
 </svg>
