@@ -10,41 +10,17 @@ A curated list of awesome resources for AI-driven autonomous operations — a co
 
 ## Contents
 
-- [Awesome Autonomous Operation](#awesome-autonomous-operation)
-  - [Contents](#contents)
-  - [Similar Projects \& Awesome Lists](#similar-projects--awesome-lists)
-  - [Autonomous Operation Platforms](#autonomous-operation-platforms)
-    - [Open Source](#open-source)
-    - [Commercial / Industry Solutions](#commercial--industry-solutions)
-  - [Observability](#observability)
-  - [Data Pipeline](#data-pipeline)
-  - [AIOps](#aiops)
-    - [Open Source](#open-source-1)
-    - [Commercial](#commercial)
-  - [Telecom Automation](#telecom-automation)
-    - [Open Source 5G Core](#open-source-5g-core)
-    - [Open Source RAN](#open-source-ran)
-    - [Platforms \& Infrastructure](#platforms--infrastructure)
-  - [Self-Healing \& Auto-Remediation](#self-healing--auto-remediation)
-  - [LLM/AI for Operations](#llmai-for-operations)
-    - [Frameworks \& Models](#frameworks--models)
-    - [Surveys](#surveys)
-  - [Incident Management \& SRE](#incident-management--sre)
-    - [Incident Management](#incident-management)
-    - [SRE Practices](#sre-practices)
-    - [Infrastructure as Code](#infrastructure-as-code)
-  - [Network Monitoring \& Flow Analysis](#network-monitoring--flow-analysis)
-    - [Awesome Lists](#awesome-lists)
-    - [Infrastructure Monitoring](#infrastructure-monitoring)
-    - [Flow Collection \& Analysis (sFlow / NetFlow / IPFIX)](#flow-collection--analysis-sflow--netflow--ipfix)
-    - [Active Measurement \& Probing](#active-measurement--probing)
-    - [TWAMP / STAMP](#twamp--stamp)
-    - [Packet Capture \& Deep Analysis](#packet-capture--deep-analysis)
-  - [Related Papers \& Standards](#related-papers--standards)
-    - [Standards \& Frameworks](#standards--frameworks)
-    - [Academic Papers](#academic-papers)
-  - [Contributing](#contributing)
-  - [License](#license)
+- [Similar Projects & Awesome Lists](#similar-projects--awesome-lists)
+- [Autonomous Operation Platforms](#autonomous-operation-platforms)
+- [Observability](#observability)
+- [Data Pipeline](#data-pipeline)
+- [AIOps](#aiops)
+- [Telecom Automation](#telecom-automation)
+- [Self-Healing & Auto-Remediation](#self-healing--auto-remediation)
+- [LLM/AI for Operations](#llmai-for-operations)
+- [Incident Management & SRE](#incident-management--sre)
+- [Network Monitoring & Flow Analysis](#network-monitoring--flow-analysis)
+- [Related Papers & Standards](#related-papers--standards)
 
 ---
 
@@ -124,7 +100,6 @@ A curated list of awesome resources for AI-driven autonomous operations — a co
 
 ### Open Source
 
-- [Keep](https://github.com/keephq/keep) - Open source AIOps alert management with AI correlation, workflow automation, and incident lifecycle. ⭐ _autonomously-io component_
 - [PyRCA](https://github.com/salesforce/PyRCA) - Python ML library for metric-based root cause analysis (Salesforce).
   - Implements Bayesian, PC, GES, and causal discovery methods for RCA.
 - [LogAI](https://github.com/salesforce/logai) - Open source library for AI-based log analytics (Salesforce).
@@ -178,7 +153,7 @@ A curated list of awesome resources for AI-driven autonomous operations — a co
 - [MeshAgent (SIGMETRICS 2026)](https://zaoxing.github.io/papers/2026/SIGMETRICS26_MeshAgent.pdf) - LLM agent for reliable network management using constraint-based knowledge extraction.
 - [MM-Telco](https://arxiv.org/html/2511.13131v1) - Multimodal LLM benchmarks for telecom applications.
 - [Network Arena](https://arxiv.org/html/2512.16381v1) - Benchmark arena for evaluating AI agents on network troubleshooting.
-- [GSMA Open-Telco LLM Benchmarks](https://www.gsma.com/get-involved/gsma-foundry/gsma-open-telco-llm-benchmarks/) ([HuggingFace](https://huggingface.co/otellm)) - Open-source benchmark evaluating AI models on telecom use cases.
+- [GSMA Open-Telco LLM Benchmarks](https://www.gsma.com/get-involved/gsma-foundry/gsma-open-telco-llm-benchmarks/) ([Hugging Face](https://huggingface.co/otellm)) - Open-source benchmark evaluating AI models on telecom use cases.
 
 ### Surveys
 
@@ -191,7 +166,6 @@ A curated list of awesome resources for AI-driven autonomous operations — a co
 
 ### Incident Management
 
-- [Keep](https://github.com/keephq/keep) - Open source alert management with workflow automation. ⭐ _autonomously-io component_
 - [PagerDuty](https://www.pagerduty.com/) - Digital operations management with AI-powered incident response.
 - [Rootly](https://rootly.com/) - Incident management with Slack-native workflows and automated runbooks.
 - [incident.io](https://incident.io/) - Incident management built for modern engineering teams.
@@ -309,7 +283,3 @@ A curated list of awesome resources for AI-driven autonomous operations — a co
 ## Contributing
 
 Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
-
-## License
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
