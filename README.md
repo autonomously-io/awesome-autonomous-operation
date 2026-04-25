@@ -21,6 +21,7 @@ A curated list of awesome resources for AI-driven autonomous operations — a co
 - [Incident Management & SRE](#incident-management--sre)
 - [Network Monitoring & Flow Analysis](#network-monitoring--flow-analysis)
 - [Related Papers & Standards](#related-papers--standards)
+- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with autonomous operation capabilities: AI-powered cluster management, self-healing detection, real-time observability, and CNCF integrations. CNCF Sandbox project.
 
 ---
 
